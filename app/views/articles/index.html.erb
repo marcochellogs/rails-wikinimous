@@ -1,0 +1,11 @@
+<div class="container w-60">
+  <div class="d-flex justify-content-center">
+    <h1>Articles</h1>
+  </div>
+  <% @articles.each do |thing| %>
+    <div class="card d-flex m-2 justify-content-center align-items-center">
+      <h2 class="m-2"><%= link_to thing.title, article_path(thing) %></h2>
+      <p class="m-2"><%= thing.content %></p>
+    </div>
+  <% end %>
+</div>
